@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ivan Espinoza - Portfolio</title>
+
+<style> 
+
+/* being link design */
+    /* pagenav link design */
+    #pagenav a{
+        color:white;
+    }
+    #pagenav a:hover{
+        color: orange;
+        transition: all 0.5s;
+    }
+    /* certificates ul link design */
+    #careerul a{
+        color: white;
+        transition: 0.25s;
+    }
+    #careerul a:hover{
+        color: orange;
+    }
+    /* semester1 ul link design */
+    #semester1ul a{
+        color: white;
+        transition: 0.25s;
+    }
+    #semester1ul a:hover{
+        color: orange;
+    }
+    /* pagefooter link design */
+    #pagefooter a{
+        color:white;
+    }
+    #pagefooter a:hover{
+        color:orange;
+        transition: all 0.5s;
+    }
+    /* footerlinks link design */
+    #footerlinks a{
+        color: white;
+    }
+    #footerlinks a:hover{
+        color: orange;
+        transition: all 0.5s;
+    }
+    /* topanchor link design */
+    #topanchor a{
+        color:black;
+    }
+    #topanchor a:hover{
+        color:white;
+        transition: all 0.25s;
+    }
+/* end link design */
+
+/* begin scroll bar design */
+    /* width */
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track{
+        background-color:#797979;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb{
+        background-color:#4f4f4f;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover{
+        background-color:#343434;
+    }
+/* end scroll bar design */
+
+/* Mobile First Design */
+    :root{
+        --color-primary:#232323;
+        --color-secondary:#4f4f4f;
+        --color-tertiary:white;
+        --color-quad:#797979;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+    font-family: monospace;
+    background-color: #232323;
+    color: var(--color-tertiary);
+    }
+    .container {
+    background-color: transparent;
+    min-height: 10rem;
+    max-width: 120rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: auto;
+    }
+    #pageheader {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    }
+    h1{
+        text-align: center;
+        transition: all 1s;
+        padding-bottom: 30px;
+        color: var(--color-tertiary);
+        font-size: 40px;
+    }
+    #pageheader .container
+    {
+        background-color: transparent;
+    }
+    #pagenav {
+    background-color: rgb(55, 55, 55);
+    min-height: 30px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    }
+    /* logo */
+    #logo
+    {background-color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(Images/Logos/Logo002.png);
+    background-size:contain;
+    border: 5px solid black;
+    position:absolute;
+    left:calc(50% - 75px);
+    transition: all 1s;
+    }
+    #media {
+    background-color: black;
+    min-height: 300px;
+    padding: 1rem;
+    background-image: url(Images/Backgrounds/Background007.png);
+    background-size: cover;
+    background-position:center center;
+    transition: all 1s;
+    }
+    #career {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    border-bottom:solid 5px var(--color-quad);
+    }
+    /* begin slideshow css */
+    #slideshow-container{
+    width: 400px;
+    overflow: hidden;
+    border: 5px solid white;
+    position: absolute;
+    right: 200px;
+    margin-top: -300px;
+    }
+    #slideshow-wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 30s infinite;
+    }
+    .slideshow-img{
+    width: 100%;
+    }
+        /* animation for slideshow */
+    @keyframes slide{
+    0% {transform: translateX(0);}
+    5% {transform: translateX(0);}
+    10% {transform: translateX(-100%);}
+    15% {transform: translateX(-100%);}
+    20% {transform: translateX(-200%);}
+    25% {transform: translateX(-200%);}
+    30% {transform: translateX(-300%);}
+    35% {transform: translateX(-300%);}
+    40% {transform: translateX(-400%);}
+    45% {transform: translateX(-400%);}
+    50% {transform: translateX(-500%);}
+    55% {transform: translateX(-500%);}
+    60% {transform: translateX(-600%);}
+    65% {transform: translateX(-600%);}
+    70% {transform: translateX(-700%);}
+    75% {transform: translateX(-700%);}
+    80% {transform: translateX(-800%);}
+    100% {transform: translateX(-800%);}
+    }
+    #pagecontent {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    border-bottom:solid 5px var(--color-quad);
+    }
+    #semester1 {
+    background-color: var(--color-secondary);
+    min-height: 200px;
+    padding: 1rem;
+    border-bottom:solid 5px var(--color-quad);
+    }
+    /* ul design */
+    #semester1ul, #careerul{
+    font-size: 15px;
+    }
+    #semester2 {
+    background-color: var(--color-secondary);
+    min-height: 200px;
+    padding: 1rem;
+    border-bottom:solid 5px var(--color-quad);
+    display: none;
+    }
+    #keyassignments{
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    border-bottom:solid 5px var(--color-quad);
+    }
+    #pagefooter {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    text-align: center;
+    border-bottom:solid 5px var(--color-quad);
+    }
+    #subfooter{
+    background-color:var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    }
+    #footerlinks{
+    display: none;
+    transform: translateX(-125px);
+    }
+    /* top-anchor */
+    #topanchor{
+        height: 25px;
+        width: 25px;
+        padding: 1rem;
+        border: 3px solid black;
+        text-align: center;
+        border-radius: 50%;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color:rgb(255, 166, 0);
+    }
+
+/* Phone, Tablet and Desktop Styles */
+/* Use media queries to detect browser window size */
+    @media screen and (min-width:0px) and (max-width:480px)
+    {
+        *{font-size: calc(80%);}
+        h1{font-size: 30px;height: 50px;padding-top: 80px;}
+        #logo{width: 80px;height: 80px;left: 20px;}
+        #pageheader{padding: 0;}
+        #slideshow-container{display: none;}
+        #pagenav{font-size: 15px;}
+        /* pagenav and .container size */
+        .container{min-height: 50px;}
+        #pagefooter{min-height: 50px;}
+        #subfooter{min-height: 50px;}
+    }
+    @media screen and (min-width:480px) and (max-width:768px)
+    {
+        *{font-size: calc(90%);}
+        #logo{left: 25px;width: 100px;height: 100px;}
+        h1{padding-top:50px;}
+        #pageheader{min-height: 150px;}
+        #slideshow-container{display: none;}
+        /* pagenav and .container size */
+        #pagefooter{min-height: 50px;padding: 0;}
+        #subfooter{min-height: 50px;}
+        .container{min-height: 50px;}
+    }
+    @media screen and (min-width:768px) and (max-width:1024px)
+    {
+        #logo{left: 25px;}
+        h1{padding-top: 30px;}
+        #footerlinks{display: block;min-width: 200px;}
+        #flexsubfooter{display: flex;justify-content: space-between;}
+        #slideshow-container{display: none;}
+        /* pagenav and .container size */
+        #pagefooter{min-height: 80px;padding: 0;}
+        #subfooter{min-height: 80px;}
+        .container{min-height: 80px;}
+    }
+    @media screen and (min-width:1024px)
+    {
+        #logo{left: 25px;}
+        h1{padding-top: 30px;}
+        #media{height: 450px;}
+        #slideshow-container{right: 75px;}
+        #footerlinks{display: block;min-width: 200px;}
+        #flexsubfooter{display: flex;justify-content: space-between;}
+        /* pagenav and .container size */
+        #pagefooter{min-height: 80px;padding: 0;}
+        #subfooter{min-height: 80px;}
+        .container{min-height: 80px;}
+    }
+    @media screen and (min-width:1200px)
+    {
+        #media{height: 600px;}
+        #slideshow-container{right: 200px;}
+        #footerlinks{display: block;min-width: 200px;}
+        #flexsubfooter{display: flex;justify-content: space-between;}
+    }
+</style>
+</head>
+<body>
+<!-- begin named anchor to navigate to the top -->
+<a name="top"></a>
+<!-- end named anchor to navigate to the top -->
+
+<!-- begin pageheader -->
+<header id="pageheader">
+<div class="container">
+        <a href="https://chsserver01.org/2024/imontano042024">
+            <div id="logo"></div>
+        </a>
+    <h1>Portfolio</h1>
+</div>
+</header>
+<!-- end pageheader -->
+
+<!-- begin pagenav -->
+<nav id="pagenav">
+    <a href="#career">Career</a>
+    |
+    <a href="#semester1">Semester 1</a>
+    <!-- <a href="#semester2">Semester 2</a> -->
+    |
+    <a href="#keyassignments">Key Assignments</a>
+</nav>
+<!-- end pagenav -->
+
+<!-- begin media -->
+<section id="media"></section>
+<!-- end media -->
+
+<!-- begin career -->
+<section id="career">
+<div class="container">
+        <a name="career"></a>
+    <h2>Career</h2>
+    <!-- career ul -->
+    <ul id="careerul">
+        <li><a href="Images/Career/PDF/Template Letter of Introduction - Ivan Montano Espinoza.pdf" target="new">Letter of Introduction</a></li>
+        <li><a href="Images/Career/PDF/Template Resume - Ivan Montano Espinoza.pdf" target="new">Resume</a></li>
+        <li><a href="Images/Career/PDF/Kami Export - Ivan Montano Espinoza - Sample Application PDF_ YOU MUST DOWNLOAD TO EDIT (1).pdf" target="new">Job Application</a></li>
+        <li><a href="Images/Career/PDF/Template Career Action Plan - Ivan Montano Espinoza.pdf" target="new">Career Plan</a></li>
+        <li><a href="Images/Career/PDF/Template References - Ivan Montano Espinoza.pdf" target="new">Work Samples</a></li>
+        <li>Certificates</li>
+            <ul id="certificates">
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Adaptability) - Ivan Montano Espinoza.pdf" target="new">Adaptability Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Architecture and Construction)- Ivan Montano Espinoza.pdf" target="new">Architecture & Construction Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Basic Hand Tools) - Ivan Montano Espinoza.pdf" target="new">Basic Hand Tools Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Framing) - Ivan Montano Espinoza.pdf" target="new">Framing Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Personal Finance)- Ivan Montano Espinoza.pdf" target="new">Personal Finance</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Power Tools)- Ivan Montano Espinoza.pdf" target="new">Power Tools Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Resume Writing)- Ivan Montano Espinoza.pdf" target="new">Resume Writing Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/Certificate of Completion (Teamwork) - Ivan Montano Espinoza.pdf" target="new">Teamwork Certificate</a></li>
+                <li><a href="Images/Certificates/PDF/State-of-California-Food-Handler-Card.pdf" target="new">Food Handlers Certificate</a></li>
+            </ul>
+    </ul>
+    <!-- slideshow for certificates -->
+    <div id="slideshow-container">
+        <div id="slideshow-wrapper">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.14.36 AM.png" alt="Adaptability Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.14.54 AM.png" alt="Architecture & Construction Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.15.07 AM.png" alt="Basic Hand Tools Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.15.22 AM.png" alt="Framing Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 2.15.45 PM.png" alt="Personal Finance" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.15.33 AM.png" alt="Power Tools Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.16.26 AM.png" alt="Resume Writing Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.16.38 AM.png" alt="Teamwork Certificate" class="slideshow-img">
+            <img src="Images/Certificates/PNG/Screenshot 2024-10-23 at 11.16.48 AM.png" alt="Food Handlers Certificate" class="slideshow-img">
+        </div>
+    </div>
+</div>
+</section>
+<!-- end career -->
+
+<!-- begin pagecontent -->
+<main id="pagecontent">
+<div class="container">
+    <h2>Introduction</h2>
+    <p id="Introduction p">WELOME TO MY WEBPAGE! This is my second year of Web Page Design after taking 2 years off. I'm glad to be back and learning new things. One of my hobbies is physical training, which I started about 2 years ago. I also like to read and study the Bible (I recommend). I also enjoy spending time with my family and friends. My favorite class this year is Building Trades class cuz it's very educational and interesting to me.</p>
+</div>
+</main>
+<!-- end pagecontent -->
+
+<!-- begin semester1 -->
+<section id="semester1">
+<div class="container">
+    <a name="semester1"></a>
+    <h2>Semester 1</h2>
+    <ul id="semester1ul">
+        <li><a href="Semester1/A001JS/a001js.html">A001JS</a></li>
+        <li><a href="Semester1/A002JS/a002js.html">A002JS</a></li>
+        <li><a href="Semester1/A003JS/a003js.html">A003JS</a></li>
+        <li><a href="Semester1/A004JS/a004js.html">A004JS</a></li>
+        <li><a href="Semester1/A005JS/a005js.html">A005JS</a></li>
+        <li><a href="Semester1/A006JS/a006js.html">A006JS</a></li>
+    </ul>
+</div>
+</section>
+<!-- end semester1 -->
+
+<!-- begin semester2 -->
+<section id="semester2">
+<div class="container">
+    <a name="semester2"></a>
+    <h2>Semester 2</h2>
+</div>
+</section>
+<!-- end semester2 -->
+
+<!-- begin keyassignments -->
+<div id="keyassignments">
+    <div class="container">
+        <a name="keyassignments"></a>
+        <h2>Key Assignments</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis dolorem dolor impedit adipisci obcaecati ullam consequuntur inventore veritatis nisi cum eum magnam repellat quas est provident assumenda, molestiae facilis. Hic numquam adipisci quam accusantium tempore temporibus? Beatae minima numquam, recusandae nobis sequi quos maxime officiis cupiditate, aut architecto, minus facere?</p>
+    </div>
+</div>
+<!-- end keyassignments -->
+
+<!-- begin pagefooter -->
+<footer id="pagefooter">
+<div class="container">
+    <h2>Navigation</h2>
+    <a href="https://chsserver01.org/" target="new" class="footerlinks">Chago</a>
+    |
+    <a href="https://color.adobe.com/create/color-wheel" target="new" class="footerlinks">Color Schemes</a>
+    |
+    <a href="https://coalingahuron.aeries.net" target="new" class="footerlinks">Aeries</a>
+    |
+    <a href="https://chs.chusd.org/" target="new" class="footerlinks">CHS</a>
+    |
+    <a href="https://classroom.google.com/h" target="new" class="footerlinks">Classroom</a>
+    |
+    <a href="https://codepip.com/" target="new" class="footerlinks">CodePip</a>
+    |
+    <a href="https://minga.io/" target="new" class="footerlinks">Minga</a>
+    |
+    <a href="https://jw.org/" target="new" class="footerlinks">JW</a>
+    
+</div>
+</footer>
+<!-- end pagefooter -->
+
+<!-- begin subfooter -->
+<footer id="subfooter">
+<div class="container">
+    
+    <div id="flexsubfooter">
+        <div id="quote">
+            <h3>Final Thoughts</h3>
+            <blockquote>
+                To Be Or Not To Be?
+                That Is The Question.
+            </blockquote>
+            <p>- Some smart guy</p>
+        </div>
+        <!-- links -->
+        <div id="footerlinks">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#semester 1">Semester 1</a></li>
+                <!-- <li>Semester 2</li> -->
+                <li><a href="#keyassignments">Key Assingments</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
+<!-- end subfooter -->
+
+<!-- begin top-anchor -->
+<div id="topanchor">
+    <a href="#top">Top</a>
+</div>
+<!-- end top-anchor -->
+
+</body>
+</html>

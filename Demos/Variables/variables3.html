@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - Events, Functions, DOM Objects</title>
+<style>
+    body{
+        font-family: monospace;
+        background-color: rgb(62, 62, 62);
+        color: white;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+        border: 3px solid black;
+        padding: 1rem;
+        display: inline-block;
+        color: white;
+    }
+    p{
+        color: yellow;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Variables - Events, Functions, DOM Objects</h1>
+    <h2>Description List</h2>
+    <!-- event dt -->
+    <dt>Event</dt>
+    <dd
+        >An action that happens in a browser such as a click, double-click, mouseover, onkeydown, onload, etc.
+    </dd>
+    <!-- function dt -->
+    <dt>Function</dt>
+    <dd>
+        A reusable chunck of code.
+    </dd>
+    <!-- DOM dt -->
+    <dt>DOM Object</dt>
+    <dd>
+        An object that represents an element on the page.
+    </dd>
+
+    <p>Double Click boxs to revert</p>
+
+    <hr>
+    <!-- button -->
+    <button onmouseover="greetUser()">Run Function</button>
+
+    <hr>
+    <!-- divs -->
+    <div id="div001" onclick="changeToRed()" ondblclick="changeRedBack()">div001</div>
+    <div id="div002" onclick="changeToYellow()" ondblclick="changeYellowBack()">div002</div>
+    <div id="div003" onclick="changeToOrange()" ondblclick="changeOrangeBack()">div003</div>
+<!-- begin script -->
+<script>
+// create function
+    function greetUser(){
+        window.alert('Hello User!');
+    }
+    // colors
+    function changeToRed(){
+        // find element on page
+        window.document.querySelector('#div001').style.backgroundColor = 'red';
+        window.document.querySelector('#div001').style.border = '15px solid magenta';
+    }
+    function changeToYellow(){
+        window.document.querySelector('#div002').style.backgroundColor = 'yellow';
+        window.document.querySelector('#div002').style.border = '15px solid blue';
+    }
+    function changeToOrange(){
+        myDiv003 = window.document.querySelector('#div003');
+        // faster coding with variable
+        myDiv003.style.backgroundColor = 'orange';
+        myDiv003.style.padding = '5rem';
+        myDiv003.style.transition = 'all 2s';
+        myDiv003.style.border = '15px solid aqua';
+        myDiv003.style.transform = 'scale(1.25)';
+        myDiv003.style.transform = 'translateX(400px)';
+    }
+    // change back
+    function changeRedBack(){
+        window.document.querySelector('#div001').style.backgroundColor = 'transparent';
+        window.document.querySelector('#div001').style.border = '3px solid black';
+    }
+    function changeYellowBack(){
+        window.document.querySelector('#div002').style.backgroundColor = 'transparent';
+        window.document.querySelector('#div002').style.border = '3px solid black';
+    }
+    function changeOrangeBack(){
+        myDiv003 = window.document.querySelector('#div003');
+        
+        myDiv003.style.backgroundColor = 'transparent';
+        myDiv003.style.padding = '1rem';
+        myDiv003.style.transition = 'all 0s';
+        myDiv003.style.border = '3px solid black';
+        myDiv003.style.height = '150px';
+        myDiv003.style.width = '150px';
+        myDiv003.style.transform = 'translateX(0px)';
+    }
+</script>
+<!-- end script -->
+</body>
+</html>

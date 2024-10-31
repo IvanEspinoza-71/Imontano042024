@@ -1,0 +1,14 @@
+body {
+    background-color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1 {
+    color: white;
+}
+h2 {
+    color: silver;
+}
+h3 {
+    font-size: 3rem;
+}

@@ -1,0 +1,59 @@
+body{
+    background-color: steelblue;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: monospace;
+}
+.container{
+    width: 600px;
+    overflow: hidden;
+    border:5px solid white;
+    position: absolute;
+    left: calc(50% - 300px);
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 10s infinite;
+}
+img{
+    width: 100%;
+}
+/* slide animation */
+@keyframes slide{
+    0% {transform: translateX(0);}
+    10% {transform: translateX(0);}
+    20% {transform: translateX(-100%);}
+    30% {transform: translateX(-100%);}
+    40% {transform: translateX(-200%);}
+    50% {transform: translateX(-200%);}
+    60% {transform: translateX(-300%);}
+    75% {transform: translateX(-300%);}
+    85% {transform: translateX(-400%);}
+    100% {transform: translateX(-400%);}
+}
+
+/*
+@keyframes slide{
+    0% {transform: translateX(0);}
+    5% {transform: translateX(0);}
+    10% {transform: translateX(-100%);}
+    15% {transform: translateX(-100%);}
+    20% {transform: translateX(-200%);}
+    25% {transform: translateX(-200%);}
+    30% {transform: translateX(-300%);}
+    35% {transform: translateX(-300%);}
+    40% {transform: translateX(-400%);}
+    45% {transform: translateX(-400%);}
+    50% {transform: translateX(-500%);}
+    55% {transform: translateX(-500%);}
+    60% {transform: translateX(-600%);}
+    65% {transform: translateX(-600%);}
+    70% {transform: translateX(-700%);}
+    75% {transform: translateX(-700%);}
+    80% {transform: translateX(-800%);}
+    100% {transform: translateX(-800%);}
+}
+*/

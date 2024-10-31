@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDK</title>
+<style>
+    body{
+        font-family: monospace;
+        text-align: center;
+    }
+    button{
+        cursor:pointer;
+        border: 1px solid black;
+    }
+    #wrapper{
+        border: 1px solid black;
+        max-width: 500px;
+        min-height: 200px;
+        margin: auto;
+    }
+    .dark{
+        background-color: black;
+        color:white;
+    }
+</style>
+</head>
+<body>
+    <h1> Welcome </h2><span id="future-clicked"></span>
+        <div id="wrapper">
+            <h3>Dark/Light Mode</h3>
+            <button onclick="myFunction()" onclick="toggleLabel()">Change</button>
+        </div>
+
+
+<!-- begin script -->
+        <script>
+            function myFunction() {
+            let element = document.body;
+            element.classList.toggle("dark");
+        }
+            function toggleLabel(){
+                const btn = 
+                document.querySelector('button');
+                if (btn.innerText === 'Dark') {
+                btn.innerText = 'Light!';
+            } else {
+                btn.innerText = 'Dark';
+            }
+            }
+        </script>
+<!-- end script -->
+</body>
+</html>

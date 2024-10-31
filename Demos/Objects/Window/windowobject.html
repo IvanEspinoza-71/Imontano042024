@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+<style>
+
+</style>
+</head>
+<body>
+    <h1>Window Object</h1>
+
+    <h2>Methods (Actions)</h2>
+    <ul>
+        <li>prompt()</li>
+        <li>alert()</li>
+        <li>confirm()</li>
+        <li>print()</li>
+        <li>scrollTo()</li>
+        <li>close()</li>
+    </ul>
+
+    <h2>Properties (Descriptor)</h2>
+    <ul>
+        <li>location</li>
+        <li>innerWidth</li>
+        <li>innerHeight</li>
+    </ul>
+
+<!-- begin script -->
+    <script>
+        // Window methods
+        window.prompt('Type in ur name');
+        window.alert('You have a virus. Download this file to clean your computer.');
+        window.confirm('Do you want to donate? GO TO OUR SITE!');
+        window.print();
+        // window.close();
+
+        // Window properties
+        window.alert(window.location);
+        window.alert(window.innerWidth);
+        window.alert(window.innerHeight);
+
+        // combine methods and properties
+        // window.setTimeout(window.location = "https://espn.com/", 1000);
+    </script>
+<!-- end script -->
+</body>
+</html>

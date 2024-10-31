@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029G8</title>
+<style>
+body{
+    background-color: #4F4F4F;
+    font-family: monospace;
+    color: white;
+}
+#pageheader{
+    text-align: center;
+    background-color: #232323;
+    min-height: 200px;
+    padding: 1rem;
+}
+h1{
+    text-align: center;
+    transition: all 1s;
+    padding-top: 130px;
+}
+#logo
+    {background-color: black;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url(Images/Logos/Logo002.png);
+    background-size:contain;
+    border: 5px solid black;
+    position:absolute;
+    left:calc(50% - 60px);
+    transition: all 1s;
+}
+#div001, #div002, #div003, #div004, #div005{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    border: 5px solid orange;
+    transition: all 1s;
+    margin: auto;
+    padding: 1rem;
+}
+#div001:hover{
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    border: 5px solid red;
+    transform: rotate(99720deg);
+}
+#div002:hover{
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    border-bottom-right-radius: 25px 50px;
+    border-top-left-radius: 25px 50px;
+    border: 5px solid red;
+    transform: skew(-50deg);
+}
+#div003:hover{
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    border: 5px solid red;
+    transform: scale(2);
+}
+#div004:hover{
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    border-radius: 1em 4em 1em 4em;
+    border: 5px solid red;
+    transform: translateX(100px);
+}
+#div005:hover{
+    background-color: orange;
+    height: 100px;
+    width: 200px;
+    border-radius: 1em 4em 1em 4em;
+    border: 5px solid red;
+    transform: translateX(-100px);
+}
+#footer{
+    min-height: 200px;
+}
+/* begin scroll bar design */
+    /* width */
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track{
+        background-color:#797979;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb{
+        background-color:#333333;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover{
+        background-color:#343434;
+    }
+/* end scroll bar design */
+
+/* Tablet and Desktop Styles */
+/* Use meida queries to detect browser window size */
+@media screen and (min-width:480px)
+{
+    #logo{left: 25px;}
+    h1{padding-top:25px;}
+    #pageheader{min-height: 150px;}
+}
+</style>
+</head>
+<body>
+<!-- begin pageheader -->
+<header id="pageheader">
+    <div class="container">
+            <a href="https://chsserver01.org/2024/imontano042024">
+                <div id="logo"></div>
+            </a>
+        <h1>Script Tag and Comments</h1>
+        <h2>A001JS</h2>
+    </div>
+    </header>
+<!-- end pageheader -->
+
+<!-- begin divs -->
+    <div id="div001">div001</div>
+    <div id="div002">div002</div>
+    <div id="div003">div003</div>
+    <div id="div004">div004</div>
+    <div id="div005">div005</div>
+
+<!-- footer -->
+<div id="footer"></div>
+</body>
+</html>

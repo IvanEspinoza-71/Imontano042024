@@ -1,0 +1,38 @@
+body{
+    background-color: #4F4F4F;
+    font-family: monospace;
+    color: white;
+}
+#pageheader{
+    text-align: center;
+    background-color: #232323;
+    min-height: 200px;
+    padding: 1rem;
+}
+h1{
+    text-align: center;
+    transition: all 1s;
+    padding-top: 130px;
+}
+#logo
+    {background-color: black;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url(Images/Logos/Logo002.png);
+    background-size:contain;
+    border: 5px solid black;
+    position:absolute;
+    left:calc(50% - 60px);
+    transition: all 1s;
+}
+
+
+/* Tablet and Desktop Styles */
+/* Use meida queries to detect browser window size */
+@media screen and (min-width:480px)
+{
+    #logo{left: 25px;}
+    h1{padding-top:25px;}
+    #pageheader{min-height: 150px;}
+}
