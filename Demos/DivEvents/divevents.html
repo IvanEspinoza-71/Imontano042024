@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Transform</title>
+<style>
+div {
+height: 150px;
+width: 150px;
+background-color: lightblue;
+border: 3px solid black;
+margin: 1rem;
+transition: all 2s;
+}
+#div001:hover {
+background-color: red;
+}
+#div002:hover {
+background-color: darkorange;
+}
+#div003:hover {
+background-color: lime;
+}
+#div004:hover {
+background-color: lavender;
+}
+#div005:hover {
+background-color: magenta;
+}
+</style>
+</head>
+<body>
+<div id="div001" onclick="animationOne()">Div001</div>
+<div id="div002" onclick="animationTwo()">Div002</div>
+<div id="div003" onclick="animationThree()">Div003</div>
+<div id="div004" onclick="animationFour()">Div004</div>
+<div id="div005" onclick="animationFive()">Div005</div>
+
+<!-- begin script -->
+<script>
+    function animationOne(){
+        // window.alert('One!');
+        window.document.querySelector('#div002').style.transform = 'translate(200px, 300px)';
+
+    }
+    function animationTwo(){
+        // window.alert('Two!');
+        window.document.querySelector('#div003').style.transform = 'rotate(999999720deg) scale(1.5) translate(200px)';
+    }
+
+    function animationThree(){
+        window.document.querySelector('#div004').style.transform = 'scale(0.5) rotate(720deg) translate(300px)';
+    }
+</script>
+</body>
+</html>
