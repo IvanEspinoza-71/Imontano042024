@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Border Animaiton 3</title>
+<style>
+    :root{
+        --color-primary:#232323;
+        --color-secondary:#4f4f4f;
+        --color-tertiary:white;
+        --color-quad:#797979;
+    }
+    body{
+    font-family: monospace;
+    background-color: #232323;
+    color: var(--color-tertiary);
+    color: white;
+    }
+    .container{
+    background-color: transparent;
+    min-height: 10rem;
+    max-width: 120rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: auto;
+    }
+    #pagecontent{
+        position: relative;
+        transform: translateY(100px);
+    }
+    /* this used to have an id of pagecontent */
+    #test {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    /* border animation thing */
+    display: grid;
+    position: relative;
+    border-radius: 10px;
+    place-items: center;
+    overflow: hidden ;
+    }
+    #test:hover::before
+    {
+        animation: animate 5s linear infinite;
+    }
+    #test::before{
+        position: absolute;
+        content: "";
+        width: 5%;
+        height: 1080%;
+        background-color: red;
+        transform: rotate(90deg);
+    }
+    #test::after{
+        position: absolute;
+        content: "";
+        inset: 10px;
+        border-radius: 8px;
+        background-color: #545454;
+    }
+    @keyframes animate{
+        from{transform:rotate(90deg);}
+        to{transform:rotate(450deg);}
+    }
+</style>
+</head>
+<body>
+    <h1>Hover Border Animation 3</h1>
+    <!-- begin pagecontent -->
+    <main id="pagecontent">
+    <div class="container">
+        <h2>Introduction</h2>
+        <p>WELOME TO MY WEBPAGE! This is my second year of Web Page Design after taking 2 years off. I'm glad to be back and learning new things. One of my hobbies is physical training, which I started about 2 years ago. I also like to read and study the Bible (I recommend). I also enjoy spending time with my family and friends. My favorite class this year is Building Trades class cuz it's very educational and interesting to me.</p>
+    </div>
+    </main>
+    <!-- end pagecontent -->
+    <div id="test"></div>
+    <h2 id="introh2">Introduction</h2>
+    <p id="introp">WELOME TO MY WEBPAGE! This is my second year of Web Page Design after taking 2 years off. I'm glad to be back and learning new things. One of my hobbies is physical training, which I started about 2 years ago. I also like to read and study the Bible (I recommend). I also enjoy spending time with my family and friends. My favorite class this year is Building Trades class cuz it's very educational and interesting to me.</p>
+</body>
+</html>

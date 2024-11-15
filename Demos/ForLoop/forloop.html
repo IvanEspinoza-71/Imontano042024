@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+<style>
+    body{
+        font-family: monospace;
+        background-color: #232323;
+        color: white;
+        text-align: center;
+    }
+    h1{
+        font-size: 40px;
+    }
+    table{
+        border: 2px solid silver;
+        margin: auto;
+    }
+    th{
+        padding: 1rem;
+        border: 1px solid silver;
+        background-color: darkorange;
+    }
+    td{
+        padding: 1rem;
+        border: 1px solid silver;
+    }
+</style>
+</head>
+<body>
+    <h1>For Loop</h1>
+    <h2>Table Example</h2>
+    <table>
+        <tr><th>Name</th><th>Grade</th></tr>
+        <tr><td>Ivan</td><td>A++++</td></tr>
+        <tr><td>John</td><td>F-</td></tr>
+        <tr><td>Frank</td><td>C+</td></tr>
+    </table>
+    <h2>Dynamic JavaScript Table</h2>
+<!-- begin script -->
+<script>
+    // build table
+    window.document.write('<table>');
+    window.document.write('<tr>');
+    window.document.write('<th>X</th>');
+
+    // begin horizontal headers
+    for (let i = 1; i < 13; i++){
+        window.document.write(`<th>${i}</th>`);
+    }
+    
+    window.document.write('</tr>');
+    // end horizontal
+
+    // create vertical headers
+    for (let z = 1; z < 13; z++){
+        window.document.write('<tr>');
+        window.document.write(`<th>${z}</th>`);
+        // td nested for loop
+        for (let w = 1; w < 13; w++){
+        window.document.write('<td>');
+        window.document.write(`${w * z}`);
+        window.document.write('</td>');
+        }
+    }
+    // end vertical headers
+
+    // begin mutiplication products
+    /* for (let w = 1; w < 13; w++){
+        window.document.write('<td>');
+        window.document.write(`${w}`);
+        window.document.write('</td>');
+    } */
+    // end mutiplication products
+
+    window.document.write('</table>');
+
+
+
+
+
+    // // build table
+    // window.document.write('<table>');
+    // window.document.write('<tr>');
+
+    //     for (let i = 1; i < 13; i++){
+    //         // code
+    //         window.document.write(`<td>${i}</td>`);
+    //     }
+
+    // window.document.write('</tr>');
+    // window.document.write('</table>');
+</script>
+</body>
+</html>

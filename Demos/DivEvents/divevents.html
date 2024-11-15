@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Transform</title>
 <style>
+body{
+background-color: rgb(66, 66, 66);
+font-family: monospace;
+}
 div {
 height: 150px;
 width: 150px;
@@ -36,9 +40,17 @@ background-color: magenta;
 <div id="div003" onclick="animationThree()">Div003</div>
 <div id="div004" onclick="animationFour()">Div004</div>
 <div id="div005" onclick="animationFive()">Div005</div>
+<div id="div006">Div006</div>
+
 
 <!-- begin script -->
 <script>
+    // Create a DOM variable
+
+    const buttonSix = window.document.querySelector('#div006');
+
+buttonSix.addEventListener('click', animationSix);
+
     function animationOne(){
         // window.alert('One!');
         window.document.querySelector('#div002').style.transform = 'translate(200px, 300px)';
@@ -51,6 +63,9 @@ background-color: magenta;
 
     function animationThree(){
         window.document.querySelector('#div004').style.transform = 'scale(0.5) rotate(720deg) translate(300px)';
+    }
+    function animationSix(){
+        window.alert('nerd');
     }
 </script>
 </body>

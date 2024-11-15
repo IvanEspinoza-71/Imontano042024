@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(59, 59, 59);
+    color: white;
+    font-family: monospace;
+}
+#buttonholder{
+    background-color: silver;
+    border: 1px solid black;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -105,13 +105,38 @@
     min-height: 200px;
     padding: 1rem;
     }
-    h1{
-        text-align: center;
-        transition: all 1s;
-        padding-bottom: 30px;
-        color: var(--color-tertiary);
-        font-size: 40px;
+/* begin h1 wave animation */
+    #h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-top: 55px;
     }
+    #h1 span{
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+    }
+    @keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    }
+    /* Adding delay to each letter */
+    #h1 span:nth-child(1) { animation-delay: 0s; }
+    #h1 span:nth-child(2) { animation-delay: 0.1s; }
+    #h1 span:nth-child(3) { animation-delay: 0.2s; }
+    #h1 span:nth-child(4) { animation-delay: 0.3s; }
+    #h1 span:nth-child(5) { animation-delay: 0.4s; }
+    #h1 span:nth-child(6) { animation-delay: 0.5s; }
+    #h1 span:nth-child(7) { animation-delay: 0.6s; }
+    #h1 span:nth-child(8) { animation-delay: 0.7s; }
+    #h1 span:nth-child(9) { animation-delay: 0.8s; }
+/* end h1 wave animation */
     #pageheader .container
     {
         background-color: transparent;
@@ -136,6 +161,13 @@
     position:absolute;
     left:calc(50% - 75px);
     transition: all 1s;
+    animation: float 5s infinite;
+    }
+    /* logo float animation */
+    @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
     }
     #media {
     background-color: black;
@@ -152,7 +184,7 @@
     padding: 1rem;
     border-bottom:solid 5px var(--color-quad);
     }
-    /* begin slideshow css */
+    /* begin slideshow */
     #slideshow-container{
     width: 400px;
     overflow: hidden;
@@ -321,7 +353,17 @@
         <a href="https://chsserver01.org/2024/imontano042024">
             <div id="logo"></div>
         </a>
-    <h1>Portfolio</h1>
+    <div id="h1">
+        <span>P</span>
+        <span>O</span>
+        <span>R</span>
+        <span>T</span>
+        <span>F</span>
+        <span>O</span>
+        <span>L</span>
+        <span>I</span>
+        <span>O</span>
+    </div>
 </div>
 </header>
 <!-- end pageheader -->
@@ -388,7 +430,7 @@
 <main id="pagecontent">
 <div class="container">
     <h2>Introduction</h2>
-    <p id="Introduction p">WELOME TO MY WEBPAGE! This is my second year of Web Page Design after taking 2 years off. I'm glad to be back and learning new things. One of my hobbies is physical training, which I started about 2 years ago. I also like to read and study the Bible (I recommend). I also enjoy spending time with my family and friends. My favorite class this year is Building Trades class cuz it's very educational and interesting to me.</p>
+    <p>WELOME TO MY WEBPAGE! This is my second year of Web Page Design after taking 2 years off. I'm glad to be back and learning new things. One of my hobbies is physical training, which I started about 2 years ago. I also like to read and study the Bible (I recommend). I also enjoy spending time with my family and friends. My favorite class this year is Building Trades class cuz it's very educational and interesting to me.</p>
 </div>
 </main>
 <!-- end pagecontent -->

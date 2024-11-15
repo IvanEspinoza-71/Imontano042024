@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A006JS</title>
+<link rel="stylesheet" href="CSS/prism.css">
+<link rel="stylesheet" href="CSS/styles.css">
+
 </head>
 <body>
     <h1>A006JS</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime laboriosam voluptatem quia similique non nisi earum quis veniam. Tenetur, est nesciunt dolorem ad ratione temporibus mollitia voluptatibus fugit ullam accusantium dolores in blanditiis placeat voluptatem excepturi praesentium magni! Fugiat aliquid placeat quaerat quam architecto officia suscipit repellat tenetur soluta fuga.</p>
+    <ul>
+        <li>click</li>
+        <li>dblclick</li>
+        <li>focus</li>
+        <li>resize</li>
+        <li>unload</li>
+        <li>mouseover</li>
+        <li>mouseout</li>
+    </ul>
+
+<!-- div for buttons -->
+    <div id="buttonholder">
+        <button id="btnOne">Click</button>
+        <button id="btnTwo">DblClick</button>
+        <button id="btnThree">MouseOver</button>
+    </div>
+
+
+<!-- begin script -->
+<script src="Scripts/scripts.js"></script>
+<script src="Scripts/prism.js"></script>
+<!-- end script -->
+
+<!-- begin pre tag -->
+<pre>
+    <code class="language-js">
+        // assign variables
+        const buttonOne = window.document.querySelector('#btnOne');
+        const buttonTwo = window.document.querySelector('#btnTwo');
+        const buttonThree = window.document.querySelector('#btnThree');
+
+        // add events
+        buttonOne.addEventListener('click', theClick);
+        buttonTwo.addEventListener('dblclick', theDblClick);
+        buttonThree.addEventListener('mouseover', theMouseOver);
+
+        // add function
+        function theClick(){
+            window.alert('One!');
+        }
+        function theDblClick(){
+            window.alert('Two!');
+        }
+        function theMouseOver(){
+            window.alert('Three!');
+        }
+    </code>
+</pre>
+<!-- end pre tag -->
 </body>
 </html>

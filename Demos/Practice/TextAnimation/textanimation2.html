@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Aniamtion 2</title>
+<style>
+    body{
+        background-color: rgb(76, 76, 76);
+        color: white;
+        text-align: center;
+        font-family: monospace;
+        padding: 10rem;
+    }
+    .wave-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    }
+
+  /* Styling each letter */
+    .wave-title span {
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+    }
+    @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Adding delay to each letter */
+  .wave-title span:nth-child(1) { animation-delay: 0s; }
+  .wave-title span:nth-child(2) { animation-delay: 0.1s; }
+  .wave-title span:nth-child(3) { animation-delay: 0.2s; }
+  .wave-title span:nth-child(4) { animation-delay: 0.3s; }
+  .wave-title span:nth-child(5) { animation-delay: 0.4s; }
+  .wave-title span:nth-child(6) { animation-delay: 0.5s; }
+  .wave-title span:nth-child(7) { animation-delay: 0.6s; }
+  .wave-title span:nth-child(8) { animation-delay: 0.7s; }
+  .wave-title span:nth-child(9) { animation-delay: 0.8s; }
+  /* Add more delay settings as needed */
+</style>
+</head>
+<body>
+    <h1>Text Animation 2</h1>
+    <div class="wave-title">
+        <!-- Each letter is wrapped in a span -->
+        <span>W</span><span>A</span><span>V</span><span>E</span> <span>T</span><span>I</span><span>T</span><span>L</span><span>E</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Event Listeners</title>
+<style>
+    body{
+        background-color: rgb(58, 58, 58);
+        color: white;
+        font-family: monospace;
+        text-align: center;
+    }
+    #box{
+        background-color: magenta;
+        padding: 1rem;
+        width: 50%;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+    <h1>Buttons Event Listeners</h1>
+    <div id="box">
+        <button id="button">Click Me</button>
+    </div>
+
+<!-- begin script -->
+<script>
+    const btnOne = window.document.querySelector('#button');
+    btnOne.addEventListener('click', sayHello);
+    function sayHello(){
+        window.alert('hi');
+    }
+</script>
+</body>
+</html>
