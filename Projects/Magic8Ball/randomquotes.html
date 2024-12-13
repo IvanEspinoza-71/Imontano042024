@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+<style>
+    body{
+        background-color: #232323;
+        color: white;
+        font-family: monospace;
+    }
+    h1{
+        text-align: center;
+        padding: 1rem;
+    }
+</style>
+</head>
+<body>
+    <h1>Random Quotes</h1>
+
+
+<!-- begin script -->
+<script>
+    // display random quotes
+    let quotes = [];
+    quotes[0] = 'To be or not to be';
+    quotes[1] = 'Be yourself';
+    quotes[2] = "Don't be yourself";
+    quotes[3] = 'When life gives you lemons, make apple juice';
+    // random number/quote
+    let r = Math.floor( Math.random() * 4 );
+
+    // dispay quote
+    window.document.write(quotes[r]);
+</script>
+<!-- begin script -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Image Shadow</title>
+<style>
+    body
+    {
+        background-color: white;
+        font-family: monospace;
+        color: white;
+    }
+    h1{
+        text-align: center;
+        padding: 1rem;
+    }
+    #image{
+        background-image: url(Images/Logo002.png);
+        width: 200px;
+        height: 200px;
+        background-position:center center;
+        background-size: cover;
+        margin: auto;
+        animation: spin 3s linear infinite;
+        border-radius: 50%;
+    }
+    #image::before{
+        content: '';
+        position: absolute;
+        box-shadow: 30px 30px 60px rgba(0,0,0,0.75);
+        z-index: -1;
+    }
+    @keyframes spin{
+        from{transform: rotate(0);}
+        to{transform: rotate(360deg);}
+    }
+</style>
+</head>
+<body>
+    <h1>Spinning Image Shadow</h1>
+    <div id="image"></div>
+
+
+</body>
+</html>

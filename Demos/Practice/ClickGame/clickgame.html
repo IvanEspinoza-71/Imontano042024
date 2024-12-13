@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Game</title>
+<style>
+    body{
+        background-color: #232323;
+        color: white;
+        font-family: monospace;
+        min-height: 100vh;
+    }
+    h1{
+        text-align: center;
+        padding: 1rem;
+    }
+    #canvas{
+        min-height: 100vh;
+        width: 100%;
+    }
+    .circle{
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <h1>Click Game</h1>
+    <div id="canvas">
+        <div class="circle"></div>
+    </div>
+
+
+<!-- begin script -->
+<script>
+    // create div
+    // let canvas = document.querySelector('#canvas');
+    // canvas.addEventListener('click', createDiv);
+    // function createDiv (){
+    //     let div = document.createElement('div'); // creates a div
+    //     div.classList.add('circle'); // gives div a class
+    //     canvas.appendChild(div); // actually adds the div 
+    // }
+
+    // PROBLEM: DIV IS CRAETED INSIDE CAVAS AND WHEN U CLIKC ON .CIRCLE IN CANT BE RECOGNIZED
+
+    //  click on div
+    let circle = document.querySelector('.circle');
+    circle.addEventListener('click', remove);
+    function remove (){
+        // alert('removed');
+        let div = document.createElement('div'); // creates a div
+        div.classList.add('circle'); // gives div a class
+        canvas.appendChild(div); // actually adds the div 
+        
+    }
+</script>
+<!-- end script -->
+</body>
+</html>

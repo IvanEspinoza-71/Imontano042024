@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element</title>    
+    <style>
+        button
+        {
+            background-color: lightblue;
+            padding:16px;
+            font-size:32px;
+        }
+        div
+        {
+            background-color:red;
+            transition:all .5s;
+            text-align:center;
+            padding:16px;
+            
+        }
+        div:hover
+        {
+            background-color:blue;
+            transform:translateY(50px);
+        }
+    </style>
+    
+</head>
+<body>
+    <button id="btnaddelement">Add Element</button>
+    <hr>
+
+    <script>
+        let btnAddElement = window.document.querySelector('#btnaddelement');
+
+        window.document.addEventListener('click', function()
+        { 
+            for(let i= 0; i<1000; i++)
+            {
+                
+            let myDiv = window.document.createElement('div');
+            myDiv.style.width="100px";
+            myDiv.style.height="100px";
+            myDiv.style.borderRadius="50%";
+            myDiv.style.display= "inline-block"; 
+            myDiv.textContent = i;         
+                window.document.body.appendChild(myDiv);
+            }
+        });
+    </script>
+</body>
+</html>

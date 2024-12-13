@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+    body{
+        background-color: #232323;
+        color: white;
+        animation-name: shiftbackground;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    /* aniamtion for background */
+    @keyframes shiftbackground {
+        from{background-color: #111;}
+        to{background-color: #333;}
+    }
+    h1{
+        font-family: monospace;
+        border: 2px solid white;
+        text-align: center;
+        padding: 1rem;
+        background-color: #111;
+    }
+/* begin eight ball style */
+    #outercircle{
+        background-color: #111;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        margin: auto;
+        border: 2px solid white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 10px white;
+        transition: all 1s;
+        /* add animation TEMP */
+        animation-name: none;
+        animation-duration: 0.12s;
+        animation-iteration-count: 15;
+        animation-direction: alternate;
+    }
+    #outercircle:hover{
+        box-shadow: 3px 3px 30px white;
+    }
+    /* animation to shake ball */
+    @keyframes shake {
+        from{transform: translateX(-20px)}
+        to{transform: translateX(20px)}
+    }
+    #innercircle{
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    #eight{
+        color: black;
+        font-size: 8rem;
+    }
+    #message{
+        width: 200px;
+        height: 200px;
+        background-color: darkblue;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+    }
+    /* google fonts */
+    .chakra-petch-light {
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+
+/* end eight ball style */
+
+</style>
+</head>
+<body>
+    <h1 class="chakra-petch-light">Magic 8 Ball</h1>
+
+    <!-- begin 8 ball -->
+    <div id="outercircle">
+        <div id="innercircle">
+            <div id="eight" class="chakra-petch-light">8</div>
+            <div id="message"></div>
+        </div>
+    </div>
+
+
+
+<!-- begin script -->
+<script>
+    // create variables
+    let outerCircle; // outercircle (black circle)
+    let innercircle; // innercircle (white circle)
+    let eight; // 8 text
+    let messageDisplay; // for the message
+
+    // make ball (outercircle) clickable
+    outerCircle = window.document.querySelector('#outercircle');
+    // add event listener
+    outerCircle.addEventListener('click', shakeBall);
+    // create function for event listener
+    function shakeBall(){
+        outerCircle.style.animationName = 'shake';
+    }
+
+
+    // random message js
+    // let ranMess = window.document.querySelector('#message');
+    // outerCircle.addEventListener('click', ranMessage);
+    
+    function ranMessage (){
+    let  answers = [];
+        answers[0] = 'It is certain';
+        answers[1] = 'It is decidedly so';
+        answers[2] = 'Without a doubt';
+        answers[3] = 'Yes definitely';
+        answers[4] = 'You may rely on it';
+        answers[5] = 'As I see it, yes';
+        answers[6] = 'Most likely';
+        answers[7] = 'Outlook good';
+        answers[8] = 'Yes';
+        answers[9] = 'Signs point to yes';
+        answers[10] = 'Hmm, try again';
+        answers[11] = 'Ask again later';
+        answers[12] = 'Better not tell you now';
+        answers[13] = 'Cannot predict now';
+        answers[14] = 'Concentrate and ask again';
+        answers[15] = 'Don’t count on it';
+        answers[16] = 'My reply is no';
+        answers[17] = 'My sources say no';
+        answers[18] = 'Outlook not so good';
+        answers[19] = 'Very doubtful';
+        r = Math.random() * 20;
+        r = Math.floor(r);
+        // alert(answers[r]);
+        message.innerHTML = answers[r];
+    }
+
+</script>
+<!-- end script -->
+</body>
+</html>

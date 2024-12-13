@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Spark Effect</title>
+<style>
+    body{
+        background-color: #232323;
+        color: white;
+        font-family: monospace;
+        min-height: 200vh;
+    }
+    h1{
+        text-align: center;
+        padding: 1rem;
+    }
+    /* place/shape of spark */
+    .spark{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        transform: translate(5px, -5px);
+    }
+    /* make shape of the spark */
+    .spark span{
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        overflow: hidden;
+        transform-origin: bottom;
+        filter: drop-shadow(0 0 20px lime) drop-shadow(0 0 40px lime); /* lime looks better */
+    }
+    .spark span::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: lime;
+        animation: boom 1s ease-in-out forwards;
+    }
+    @keyframes boom {
+        0%{transform: translateY(100%);}
+        100%{transform: translateY(-100%);}
+    }
+</style>
+</head>
+<body>
+    <h1>Click Spark Effect</h1>
+
+<!-- begin script -->
+<script>
+    // assign variable for body
+    let body = document.querySelector('body');
+    body.addEventListener('click', function(event){
+        let spark = document.createElement('div'); // creates a div when click
+        spark.classList.add('spark'); // gives the div a class
+        body.appendChild(spark); // actually adds div
+
+        // places div where you click
+        let rect = body.getBoundingClientRect();
+        spark.style.top = (event.clientY - rect.top) + 'px';
+        spark.style.left = (event.clientX - rect.left) + 'px';
+        spark.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)'; // changes color
+
+        // forloop for spark lines
+        for(var i = 0; i <= 7; i++){
+            let span = document.createElement('span');
+            span.style.transform = 'rotate('+(i * 45)+'deg)';
+            spark.appendChild(span);
+        }
+
+        // removes after set time
+        setTimeout(function(){
+            spark.remove();
+        }, 1000);
+    });
+
+
+/*
+    // assign variable for body
+    body.addEventListener('click', function(event){
+        let spark = document.createElement('div'); // creates a div when click
+        spark.classList.add('spark'); // gives the div a class
+        body.appendChild(spark);
+
+        // places div where you click
+        let rect = body.getBoundingClientRect();
+        spark.style.top = (event.clientY - rect.top) + 'px';
+        spark.style.left = (event.clientX - rect.left) + 'px';
+
+        // for loop for spark lines
+        for(var i = 0; i <= 7; i++){
+            let span = document.createElement('span');
+            span.style.transform = 'rotate('+(i * 45)+'deg)';
+            spark.appendChild(span);
+        }
+
+        // removes after set time
+        setTimeout(function(){
+            spark.remove();
+        }, 1000);
+    });
+*/
+</script>
+<!-- end script -->
+</body>
+</html>
